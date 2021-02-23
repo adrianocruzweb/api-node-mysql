@@ -7,6 +7,11 @@ const OrderController = require('./controllers/OrderController')
 
 const routes = express.Router()
 
+//route default
+routes.get('/', (req, res) => {
+  return res.json({message: "Um bom dia"})
+})
+
 // list all companies
 routes.get('/companies', CompanieController.index)
 // create one companie
