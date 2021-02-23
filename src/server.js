@@ -1,5 +1,6 @@
 const express = require("express")
 const routes = require('./routes')
+let port = process.env.PORT || 8080;
 
 require('./database')
 
@@ -9,4 +10,4 @@ app.use(express.json())
 
 app.use(routes)
 
-app.listen(3030)
+app.listen(port)
